@@ -1,141 +1,309 @@
+/* ===== General Styling ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
 
-font-family: Arial, sans-serif;
-margin:0;
-background:#f7f9fc;
-color:#333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
 
 }
 
 
+/* ===== Navigation ===== */
+
 nav {
 
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:#ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+
+}
+
+
+nav h2 {
+
+    color: #2563eb;
+    font-size: 26px;
 
 }
 
 
 nav ul {
 
-display:flex;
-list-style:none;
-gap:25px;
+    display: flex;
+    list-style: none;
+    gap: 30px;
 
 }
 
 
 nav a {
 
-text-decoration:none;
-color:#333;
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+    transition: 0.3s;
 
 }
 
 
+nav a:hover {
+
+    color: #2563eb;
+
+}
+
+
+/* ===== Hero Section ===== */
 
 .hero {
 
-display:flex;
-align-items:center;
-justify-content:center;
-gap:50px;
-padding:70px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 90px 10%;
+    background: linear-gradient(135deg,#eff6ff,#ffffff);
 
 }
-
 
 
 .hero img {
 
-width:200px;
-height:200px;
-border-radius:50%;
-object-fit:cover;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #2563eb;
+    box-shadow: 0 10px 30px rgba(37,99,235,0.3);
 
 }
-
 
 
 .hero h1 {
 
-font-size:40px;
+    font-size: 42px;
+    color:#111827;
+    margin-bottom:20px;
 
 }
 
 
+.hero p {
+
+    max-width:600px;
+    font-size:18px;
+    color:#4b5563;
+    margin-bottom:30px;
+
+}
+
+
+/* ===== Button ===== */
 
 .button {
 
-background:#2563eb;
-color:white;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:14px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
 
 }
 
 
+.button:hover {
+
+    background:#1d4ed8;
+    transform:translateY(-3px);
+
+}
+
+
+/* ===== Sections ===== */
 
 section {
 
-padding:50px 10%;
+    padding:70px 10%;
 
 }
 
 
+section h2 {
+
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+    color:#111827;
+
+}
+
+
+/* ===== About ===== */
+
+#about p {
+
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    color:#4b5563;
+
+}
+
+
+/* ===== Skills ===== */
 
 .skills {
 
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
 
 }
-
 
 
 .skills div {
 
-background:white;
-padding:20px;
-text-align:center;
-border-radius:10px;
-box-shadow:0 3px 10px #ddd;
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    font-weight:600;
+    font-size:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
 
 }
 
 
+.skills div:hover {
+
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(37,99,235,0.2);
+
+}
+
+
+/* ===== Projects ===== */
 
 .card {
 
-background:white;
-padding:25px;
-margin:20px 0;
-border-radius:15px;
-box-shadow:0 3px 15px #ddd;
+    background:white;
+    padding:30px;
+    margin:25px auto;
+    max-width:900px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
 
 }
 
+
+.card:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+.card h3 {
+
+    color:#2563eb;
+    margin-bottom:15px;
+
+}
+
+
+.card p {
+
+    color:#4b5563;
+
+}
 
 
 .card img {
 
-width:100%;
-max-width:500px;
+    width:100%;
+    border-radius:15px;
 
 }
 
 
+/* ===== Contact ===== */
+
+#contact {
+
+    text-align:center;
+
+}
+
+
+#contact p {
+
+    margin:10px;
+    font-size:18px;
+
+}
+
+
+/* ===== Footer ===== */
 
 footer {
 
-text-align:center;
-padding:20px;
-background:#222;
-color:white;
+    text-align:center;
+    padding:25px;
+    background:#111827;
+    color:white;
+
+}
+
+
+/* ===== Mobile Responsive ===== */
+
+@media(max-width:768px){
+
+    .hero{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+
+    nav{
+
+        flex-direction:column;
+        gap:20px;
+
+    }
+
+
+    nav ul{
+
+        flex-wrap:wrap;
+        justify-content:center;
+
+    }
+
+
+    .hero h1{
+
+        font-size:32px;
+
+    }
 
 }
